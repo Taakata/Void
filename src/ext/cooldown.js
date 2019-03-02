@@ -17,7 +17,7 @@ export class Cooldown extends TimerUtils {
     }
 
     get() {
-        return this.getTimer();
+        return this.getTimer()
     }
 
 }
