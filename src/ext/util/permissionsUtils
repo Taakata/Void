@@ -1,0 +1,24 @@
+export class PermissionsUtils {
+    constructor() {
+        this.perms = {
+            "eval": "501370728474476545"
+        }
+    }
+
+    /**
+     *
+     * @param member
+     * @param command
+     * @returns {boolean}
+     */
+
+    take(member, command) {
+        switch (command.category) {
+            case 'Admin':
+                if (`${this.perms}.${command.name}` == member.id) return true;
+                else false;
+                break;
+        }
+    }
+
+}
